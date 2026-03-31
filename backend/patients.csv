@@ -1,0 +1,16 @@
+patient_id,name,age,gestational_week,systolic_bp,diastolic_bp,missed_appointments,income_level,transport_access,last_visit_days_ago,hemoglobin,previous_complications,area
+P001,Priya M.,28,32,158,102,4,low,none,21,8.2,preeclampsia,rural
+P002,Aisha K.,34,36,155,100,3,low,none,18,8.5,anaemia,rural
+P003,Sunita D.,31,38,152,98,3,low,limited,15,8.8,gestational_diabetes,rural
+P004,Meena R.,29,34,148,96,3,low,none,14,9.0,preeclampsia,semi-urban
+P005,Kavitha S.,26,28,135,88,2,medium,limited,10,10.2,anaemia,semi-urban
+P006,Deepa N.,30,24,130,85,2,medium,limited,9,10.5,none,semi-urban
+P007,Lakshmi P.,24,20,128,82,2,low,limited,8,10.8,none,rural
+P008,Radha V.,27,16,125,80,2,medium,good,7,11.0,anaemia,semi-urban
+P009,Anita B.,33,30,132,86,1,medium,limited,11,10.0,gestational_diabetes,semi-urban
+P010,Padma C.,25,22,120,78,2,low,none,12,9.5,none,rural
+P011,Nisha T.,22,12,110,70,0,high,good,3,12.5,none,urban
+P012,Geeta H.,28,18,112,72,0,high,good,2,12.8,none,urban
+P013,Shalini J.,26,26,115,74,0,medium,good,4,12.2,none,urban
+P014,Rekha A.,23,10,108,68,0,medium,good,5,13.0,none,urban
+P015,Pooja L.,29,14,118,76,1,medium,good,6,11.8,none,urban
