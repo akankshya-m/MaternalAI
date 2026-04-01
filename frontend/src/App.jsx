@@ -25,7 +25,7 @@ export default function App() {
             Live
           </span>
         </div>
-        <span className="ml-auto text-sm text-green-200">Maternal Health Equity · TCS AI Fridays</span>
+        <span className="ml-auto text-sm text-green-200">Maternal Health Equity ·</span>
       </header>
 
       {/* Main Layout */}
