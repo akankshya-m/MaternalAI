@@ -1,0 +1,22 @@
+{
+  "name": "MaternaWatch AI",
+  "short_name": "MaternaWatch",
+  "description": "AI-powered maternal health early warning system",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0f6e56",
+  "background_color": "#0f6e56",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

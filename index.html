@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaternaWatch AI</title>
+    <link rel="manifest" href="/MaternalAI/manifest.json" />
+    <meta name="theme-color" content="#0f6e56" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="MaternaWatch" />
+    <link rel="apple-touch-icon" href="/MaternalAI/icon.png" />
+    <script type="module" crossorigin src="/MaternalAI/assets/index-euBVyjdn.js"></script>
+    <link rel="stylesheet" crossorigin href="/MaternalAI/assets/index-CAaXRFsn.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('SW registered:', reg.scope))
+            .catch(err => console.log('SW error:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
