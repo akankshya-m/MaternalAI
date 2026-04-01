@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import chromadb
 from chromadb.config import Settings
-from sentence_transformers import SentenceTransformer
+from fastembed import TextEmbedding
 
 CHROMA_PATH = os.path.join(os.path.dirname(__file__), "chroma_db")
 PATIENTS_CSV = os.path.join(os.path.dirname(__file__), "patients.csv")
@@ -23,7 +23,7 @@ def _get_client():
 def _get_model():
     global _model
     if _model is None:
-        _model = SentenceTransformer("all-MiniLM-L6-v2")
+        _model = TextEmbedding("BAAI/bge-small-en-v1.5")
     return _model
 
 
@@ -55,7 +55,7 @@ def build_index():
             f"Previous complications: {row['previous_complications']}. "
             f"Area: {row['area']}."
         )
-        embedding = model.encode(doc).tolist()
+        embedding = next(model.embed([doc])).tolist()
         documents.append(doc)
         embeddings.append(embedding)
         ids.append(row["patient_id"])
@@ -76,7 +76,7 @@ def _get_collection():
 def search(query: str, n_results: int = 5) -> dict:
     collection = _get_collection()
     model = _get_model()
-    query_embedding = model.encode(query).tolist()
+    query_embedding = next(model.embed([query])).tolist()
 
     results = collection.query(query_embeddings=[query_embedding], n_results=min(n_results, collection.count()))
 
