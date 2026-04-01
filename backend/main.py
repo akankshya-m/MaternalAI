@@ -13,7 +13,7 @@ app = FastAPI(title="MaternaWatch AI", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://*.netlify.app", "*"],
+    allow_origins=["http://localhost:5173", "https://*.netlify.app", "https://*.github.io"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
