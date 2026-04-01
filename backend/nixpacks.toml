@@ -1,8 +1,0 @@
-[phases.setup]
-nixPkgs = ["python311Full", "python311Packages.pip", "gcc", "stdenv.cc.cc.lib"]
-
-[phases.install]
-cmds = ["pip install -r requirements.txt"]
-
-[start]
-cmd = "python generate_data.py && uvicorn main:app --host 0.0.0.0 --port $PORT"
